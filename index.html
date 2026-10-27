@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>علی کالا</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#101712;color:white;font-family:Tahoma,sans-serif}
+header{padding:25px;text-align:center;background:#1b3022;border-bottom:3px solid #d9b45b}
+h1{color:#e2c16c;font-size:35px}
+header p{color:#b7c7b9}
+nav{padding:16px;text-align:center;background:#18221b}
+nav a{color:#e2c16c;margin:10px;text-decoration:none}
+.hero{margin:25px auto;padding:35px 15px;text-align:center;background:linear-gradient(135deg,#24442c,#101712);border:1px solid #d9b45b;border-radius:18px;max-width:900px}
+.hero h2{font-size:28px}
+button{background:#d9b45b;color:#101712;border:0;padding:12px 20px;border-radius:8px;font-weight:bold;cursor:pointer}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;padding:20px;max-width:1000px;margin:auto}
+.card{background:#1b251e;border:1px solid #38513c;padding:20px;border-radius:12px;text-align:center}
+.card h3{color:#e2c16c}
+.price{color:#a8d6a7}
+footer{text-align:center;padding:25px;color:#b7c7b9;border-top:1px solid #d9b45b}
+</style>
+</head>
+<body>
+<header>
+<h1>علی کالا</h1>
+<p>خرید هوشمند، انتخاب بهتر</p>
+</header>
+<nav>
+<a href="#home">صفحه اصلی</a>
+<a href="#products">محصولات</a>
+<a href="#about">درباره ما</a>
+</nav>
+<section class="hero" id="home">
+<h2>به دنیای علی کالا خوش آمدی</h2>
+<p>محصولات منتخب با طراحی خاص و رنگ‌های طلایی، سبز و مشکی</p>
+<button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">مشاهده محصولات</button>
+</section>
+<h2 style="text-align:center;color:#e2c16c">محصولات فروشگاه</h2>
+<section class="products" id="products">
+<div class="card">
+<h3>هدفون بی‌سیم</h3>
+<p>صدای شفاف و طراحی مدرن</p>
+<p class="price">۲٬۴۵۰٬۰۰۰ تومان</p>
+<button onclick="addCart('هدفون بی‌سیم')">افزودن به سبد</button>
+</div>
+<div class="card">
+<h3>ساعت هوشمند</h3>
+<p>مناسب استفاده روزمره</p>
+<p class="price">۳٬۸۹۰٬۰۰۰ تومان</p>
+<button onclick="addCart('ساعت هوشمند')">افزودن به سبد</button>
+</div>
+<div class="card">
+<h3>کفش ورزشی</h3>
+<p>راحت و مناسب پیاده‌روی</p>
+<p class="price">۲٬۷۹۰٬۰۰۰ تومان</p>
+<button onclick="addCart('کفش ورزشی')">افزودن به سبد</button>
+</div>
+<div class="card">
+<h3>کوله‌پشتی</h3>
+<p>جادار و کاربردی</p>
+<p class="price">۱٬۶۵۰٬۰۰۰ تومان</p>
+<button onclick="addCart('کوله‌پشتی')">افزودن به سبد</button>
+</div>
+</section>
+<section id="about" style="text-align:center;padding:25px">
+<h2 style="color:#e2c16c">درباره علی کالا</h2>
+<p>یک فروشگاه اینترنتی با طراحی اختصاصی</p>
+</section>
+<footer>© ۲۰۲۶ علی کالا | تمامی حقوق محفوظ است</footer>
+<script>
+let cart=[];
+function addCart(name){
+cart.push(name);
+alert(name+' به سبد خرید اضافه شد. تعداد کالاها: '+cart.length);
+}
+</script>
+</body>
+</html>
